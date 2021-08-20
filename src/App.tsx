@@ -7,6 +7,7 @@ import { Classes, Drawer } from "@blueprintjs/core";
 import { FocusStyleManager } from "@blueprintjs/core";
 import { DatePicker, TimePrecision } from "@blueprintjs/datetime";
 import { TableDollarExample } from "./components/Table/Table";
+import { SideBar } from "./components/SideBar/SideBar";
 FocusStyleManager.onlyShowFocusOnTabs();
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         onTableClick={() => setIsTable(!isTable)}
         onHomeClick={() => setIsTable(false)}
       />
+
+      <SideBar />
+
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         {!isTable && (
           <div
