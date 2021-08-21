@@ -13,7 +13,7 @@ FocusStyleManager.onlyShowFocusOnTabs();
 function App() {
   const [isDark, setIsDark] = React.useState(false);
   const [isTable, setIsTable] = React.useState(false);
-  const [showTimeArrowButtons, setShowTimeArrowButtons] = React.useState(false);
+  const [isSideBar, setIsSideBar] = React.useState(true);
   const [date, setDate] = React.useState(new Date());
 
   const handleDateChange = (date: Date) => {
@@ -31,7 +31,7 @@ function App() {
         onHomeClick={() => setIsTable(false)}
       />
 
-      <SideBar />
+      <SideBar isSideBar={isSideBar} sideBarClick={setIsSideBar} />
 
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         {!isTable && (

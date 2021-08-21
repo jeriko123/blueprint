@@ -32,14 +32,27 @@ export interface ICard {
   elevation: Elevation;
   interactive: boolean;
   animate: boolean;
+  width: number;
 }
 
-export class SideBar extends React.PureComponent {
+interface iSideBarProps {
+  isSideBar: boolean;
+  sideBarClick: any;
+}
+
+export class SideBar extends React.PureComponent<iSideBarProps> {
   public state: ICard = {
     elevation: 2,
     interactive: true,
     animate: true,
+    width: this.props.isSideBar ? 200 : 32,
   };
+
+  componentDidUpdate(prevProps: iSideBarProps) {
+    if (this.props.isSideBar !== prevProps.isSideBar) {
+      this.setState({ width: this.props.isSideBar ? 200 : 32 });
+    }
+  }
 
   public render() {
     return (
@@ -47,34 +60,52 @@ export class SideBar extends React.PureComponent {
         {...this.state}
         style={{
           position: "absolute",
-          width: 200,
+          width: this.state.width,
           padding: 0,
           height: "calc(100vh - 50px)",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "baseline",
-            padding: 10,
-          }}
-        >
-          <H4>SIDEBAR</H4>
+        {this.props.isSideBar && (
+          <React.Fragment>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "baseline",
+                padding: 10,
+              }}
+            >
+              <H4>SIDEBAR</H4>
 
-          <Button icon="menu-closed" className={Classes.MINIMAL} />
-        </div>
-        <div style={{ padding: "0px 15px 0px 15px" }}>
-          <InputGroup
-            className={Classes.ROUND}
-            leftIcon="search"
-            placeholder="Search..."
-          />
-        </div>
-        <div style={{ padding: "10px 15px 0px 15px" }}>
-          <H5>Tree</H5>
-        </div>
-        <TreeComponent />
+              <Button
+                icon="menu-closed"
+                className={Classes.MINIMAL}
+                onClick={() => this.props.sideBarClick(false)}
+              />
+            </div>
+            <div style={{ padding: "0px 15px 0px 15px" }}>
+              <InputGroup
+                className={Classes.ROUND}
+                leftIcon="search"
+                placeholder="Search..."
+              />
+            </div>
+            <div style={{ padding: "10px 15px 0px 15px" }}>
+              <H5>Tree</H5>
+            </div>
+            <TreeComponent />
+          </React.Fragment>
+        )}
+
+        {!this.props.isSideBar && (
+          <div style={{ paddingTop: 10 }}>
+            <Button
+              icon="menu-open"
+              className={Classes.MINIMAL}
+              onClick={this.props.sideBarClick}
+            />
+          </div>
+        )}
       </Card>
     );
   }
