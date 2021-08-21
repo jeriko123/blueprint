@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/blueprint/static/css/main.eb9310df.chunk.css",
-    "main.js": "/blueprint/static/js/main.eaf445e4.chunk.js",
-    "main.js.map": "/blueprint/static/js/main.eaf445e4.chunk.js.map",
+    "main.js": "/blueprint/static/js/main.0bedcfbc.chunk.js",
+    "main.js.map": "/blueprint/static/js/main.0bedcfbc.chunk.js.map",
     "runtime-main.js": "/blueprint/static/js/runtime-main.ced28b21.js",
     "runtime-main.js.map": "/blueprint/static/js/runtime-main.ced28b21.js.map",
     "static/css/2.7c793873.chunk.css": "/blueprint/static/css/2.7c793873.chunk.css",
-    "static/js/2.a136d190.chunk.js": "/blueprint/static/js/2.a136d190.chunk.js",
-    "static/js/2.a136d190.chunk.js.map": "/blueprint/static/js/2.a136d190.chunk.js.map",
+    "static/js/2.7ad50215.chunk.js": "/blueprint/static/js/2.7ad50215.chunk.js",
+    "static/js/2.7ad50215.chunk.js.map": "/blueprint/static/js/2.7ad50215.chunk.js.map",
     "static/js/3.25e32bde.chunk.js": "/blueprint/static/js/3.25e32bde.chunk.js",
     "static/js/3.25e32bde.chunk.js.map": "/blueprint/static/js/3.25e32bde.chunk.js.map",
     "index.html": "/blueprint/index.html",
     "static/css/2.7c793873.chunk.css.map": "/blueprint/static/css/2.7c793873.chunk.css.map",
     "static/css/main.eb9310df.chunk.css.map": "/blueprint/static/css/main.eb9310df.chunk.css.map",
-    "static/js/2.a136d190.chunk.js.LICENSE.txt": "/blueprint/static/js/2.a136d190.chunk.js.LICENSE.txt",
+    "static/js/2.7ad50215.chunk.js.LICENSE.txt": "/blueprint/static/js/2.7ad50215.chunk.js.LICENSE.txt",
     "static/media/App.css": "/blueprint/static/media/icons-20.cde033c5.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.ced28b21.js",
     "static/css/2.7c793873.chunk.css",
-    "static/js/2.a136d190.chunk.js",
+    "static/js/2.7ad50215.chunk.js",
     "static/css/main.eb9310df.chunk.css",
-    "static/js/main.eaf445e4.chunk.js"
+    "static/js/main.0bedcfbc.chunk.js"
   ]
 }
